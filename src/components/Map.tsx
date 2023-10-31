@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { StyleSheet } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 import MapView, { Marker, PROVIDER_GOOGLE, Polyline } from 'react-native-maps' // remove PROVIDER_GOOGLE import if not using Google Maps
+import Icon from 'react-native-vector-icons/Ionicons'
 
 // Hooks
 import { useLocation } from '../hooks/useLocation'
@@ -48,7 +49,6 @@ export const Map = () => {
             }
         })
     }
-
     if (!hasLocation) {
         return <LoadingScreen />
     }
@@ -58,7 +58,7 @@ export const Map = () => {
             <MapView
                 ref={el => (mapViewRef.current = el!)}
                 // provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-                showsUserLocation
+                // showsUserLocation // Hide user position
                 style={styles.map}
                 region={{
                     latitude: initialPosition.latitude,
@@ -67,15 +67,20 @@ export const Map = () => {
                     longitudeDelta: 0.0121
                 }}
                 onTouchStart={() => (followingRef.current = false)}>
-                {/* <Marker
-                    image={require('../assets/custom-marker.png')}
+                <Marker
                     coordinate={{
-                        latitude: 37.73455,
-                        longitude: -122.4324
-                    }}
-                    title="Marcador"
-                    description="Descripción del marcador"
-                /> */}
+                        latitude: userLocation.latitude,
+                        longitude: userLocation.longitude
+                    }}>
+                    <View
+                        style={{
+                            borderWidth: 4,
+                            borderRadius: 50,
+                            borderColor: '#f64b4a'
+                        }}>
+                        <Icon name="car" size={40} color="#f64b4a" />
+                    </View>
+                </Marker>
 
                 {showPolyline && (
                     <Polyline
