@@ -15,9 +15,9 @@ Con esta base se puede continuar agregando funcionalidades..
 
 ## Vista previa
 
-<img src="./app-media/shot1.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
-<img src="./app-media/shot2.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
-<img src="./app-media/shot3.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
+<img src="./app-media/shot_1.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
+<img src="./app-media/shot_2.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
+<img src="./app-media/shot_3.png" width="250" height="600" alt="vista del mapa">&nbsp; &nbsp;
 
 ## Desarrollo
 
