@@ -6,6 +6,7 @@ Con esta base se puede continuar agregando funcionalidades..
 
 -   Analizar y requerir permisos para acceder a la localización
 -   Seguir al dispositivo en el mapa
+-   Pin (Marker) de usuario personalizado
 -   Mover el mapa manualmemte y dejar de seguir al dispositivo
 -   Botón para centrar y continuar el seguimiento del sispositivo
 -   Botón para activar o desactivar el trayecto recorrido
